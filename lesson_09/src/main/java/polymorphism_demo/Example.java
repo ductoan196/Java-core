@@ -16,6 +16,5 @@ public class Example {
         print("Toàn");
         print(10);
         print("Toàn","a@gmail.com");
-
     }
 }

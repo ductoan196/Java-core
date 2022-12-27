@@ -1,12 +1,13 @@
 package employee_management.repository;
 
 import employee_management.database.EmployeeDB;
+import employee_management.exception.NotFoundException;
 import employee_management.model.Employee;
 
 import java.util.ArrayList;
 
 public class EmployeeRepository {
-    public ArrayList<Employee> findAll(){
+    public static ArrayList<Employee> findAll(){
         return EmployeeDB.employees;
     }
 
@@ -31,7 +32,7 @@ public class EmployeeRepository {
                 count ++;
             }
         }
-        return null;
+        throw new NotFoundException();
     }
     public void deleteById(int id){
         int count =0;

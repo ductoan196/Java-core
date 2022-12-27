@@ -25,14 +25,36 @@ public class EmployeeController {
                 }
                 case 2:{
                     System.out.print("Nhập vào id: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
                     System.out.print("Nhập vào tên: ");
+                    String name = sc.nextLine();
                     System.out.print("Nhập vào email: ");
+                    String email = sc.nextLine();
                     System.out.print("Nhập vào salary: ");
+                    int salary =sc.nextInt();
+                    sc.nextLine();
+                    Employee employee = new Employee(id,name,email,salary);
+                    employeeRepository.save(employee);
+                    for(Employee employee1: employeeRepository.findAll()){
+                        System.out.println(employee1);
+                    }
+                    break;
                 }
                 case 3:{
+
+                    System.out.print("Nhập vào name: ");
+                    String name = sc.nextLine();
+                    sc.nextLine();
+                    System.out.println(employeeRepository.findByNameContainsIgnoresCase(name));
+                    break;
+                }
+                case 5:{
                     System.out.println("Nhập vào id:");
                     int id = sc.nextInt();
+                    sc.nextLine();
                     employeeRepository.deleteById(id);
+                    break;
                 }
             }
         }

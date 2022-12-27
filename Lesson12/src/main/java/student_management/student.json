@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Toàn",
+    "school": "Nam Lợi",
+    "address": "Ngọc Tỉnh"
+  },
+  {
+    "id": 2,
+    "name": "Linh",
+    "school": "Quang Trung",
+    "address": "Sơn Tây"
+  },
+  {
+    "id": 3,
+    "name": "Kiên",
+    "school": "Nam Long",
+    "address": "Xối Tây"
+  }
+  ]
